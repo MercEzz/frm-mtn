@@ -11,26 +11,44 @@ const AnimateBtn = () => {
 
   return (
     <Box
-      as="button"
-      w="160px"
-      h="100px"
-      bgColor="rgba(255, 255, 255, 0.4)"
-      value={isOn}
-      onClick={toggleSwitch}
+      as="body"
+      minH="100vh"
+      p="0"
+      m="0"
+      boxSizing="border-box"
+      bgGradient={
+        isOn
+          ? "linear(250deg,#7b2ff7, #f107a3)"
+          : "linear(250deg, #f107a3, #7b2ff7 )"
+      }
+      overflow="hidden"
       display="flex"
-      justifyContent={isOn ? "flex-end" : "flex-start"}
-      borderRadius="50px"
-      p="10px"
-      cursor="pointer"
+      bgRepeat="no-repeat"
+      justifyContent="center"
+      alignItems="center"
     >
-      <MotionBox
-        w="80px"
-        h="80px"
-        bgColor="white"
-        borderRadius="40px"
-        layout
-        transition={spring}
-      />
+      <Box
+        as="button"
+        w="160px"
+        h="100px"
+        bgColor="rgba(255, 255, 255, 0.4)"
+        value={isOn}
+        onClick={toggleSwitch}
+        display="flex"
+        justifyContent={isOn ? "flex-end" : "flex-start"}
+        borderRadius="50px"
+        p="10px"
+        cursor="pointer"
+      >
+        <MotionBox
+          w="80px"
+          h="80px"
+          bgColor="white"
+          borderRadius="40px"
+          layout
+          transition={spring}
+        />
+      </Box>
     </Box>
   );
 };

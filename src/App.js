@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 
 import AnimateBtn from "./components/AnimateBtn";
+import AniTabs from "./components/AniTabs";
 import Scaling from "./components/Scaling";
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
       alignItems="center"
     >
       {/* <AnimateBtn /> */}
-      <Scaling />;
+      <AniTabs />
     </Box>
   );
 };
