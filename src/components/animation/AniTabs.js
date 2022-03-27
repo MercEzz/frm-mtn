@@ -10,7 +10,12 @@ const AniTabs = () => {
   const [selectedTab, setSelectedTab] = useState();
 
   return (
-    <Box
+    <MotionBox
+      drag
+      dragTransition={{
+        min: 0,
+        max: 100,
+      }}
       w="480px"
       h="360px"
       borderRadius="10px"
@@ -99,7 +104,7 @@ const AniTabs = () => {
           </MotionBox>
         </AnimatePresence>
       </Box>
-    </Box>
+    </MotionBox>
   );
 };
 

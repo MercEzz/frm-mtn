@@ -1,8 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
-import AnimateBtn from "./components/AnimateBtn";
-import AniTabs from "./components/AniTabs";
-import Scaling from "./components/Scaling";
+import AniTabs from "./components/animation/AniTabs";
 
 const App = () => {
   return (
@@ -19,7 +17,6 @@ const App = () => {
       justifyContent="center"
       alignItems="center"
     >
-      {/* <AnimateBtn /> */}
       <AniTabs />
     </Box>
   );
