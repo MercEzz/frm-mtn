@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box } from "@chakra-ui/react";
 
-function App() {
+import AnimateBtn from "./components/AnimateBtn";
+import Scaling from "./components/Scaling";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box
+      as="body"
+      minH="100vh"
+      p="0"
+      m="0"
+      boxSizing="border-box"
+      bgGradient={"linear(250deg,#7b2ff7, #f107a3)"}
+      overflow="hidden"
+      display="flex"
+      bgRepeat="no-repeat"
+      justifyContent="center"
+      alignItems="center"
+    >
+      {/* <AnimateBtn /> */}
+      <Scaling />;
+    </Box>
   );
-}
+};
 
 export default App;
