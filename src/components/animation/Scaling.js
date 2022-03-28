@@ -18,10 +18,15 @@ const Scaling = () => {
       alignItems="center"
       layout
       value={isOpen}
-      initial={{ borderRadius: 50 }}
+      animate={{
+        scale: [1, 2, 2, 1, 1],
+        rotate: [0, 0, 270, 270, 0],
+        borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+      }}
+      // initial={{ borderRadius: 50 }}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <MotionBox w="40px" h="40px" layout bg="#f107a3" borderRadius="50px" />
+      {/* <MotionBox w="40px" h="40px" layout bg="#f107a3" borderRadius="50px" /> */}
     </MotionBox>
   );
 };
